@@ -1,0 +1,12 @@
+body{
+    padding: 2rem 0rem;
+  }
+  .image-parent {
+    max-width: 80px;
+  }
+  
+  li.list-group-item:hover{
+    background:rgb(183, 202, 236);
+    color: white;
+    }
+    
