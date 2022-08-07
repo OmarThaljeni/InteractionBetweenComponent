@@ -1,7 +1,7 @@
 export class Personne {
     id: string;
     firstName: string;
-    lastName: String;
+    lastName: string;
     age: number;
     path: string;
     cin: string;
@@ -10,7 +10,7 @@ export class Personne {
     constructor(
         id: string = '',
         firstName: string = '',
-        lastName: String = '',
+        lastName: string = '',
         age: number = 0,
         path: string = '',
         cin: string = '',

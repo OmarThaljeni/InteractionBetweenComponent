@@ -1,0 +1,50 @@
+<div class="container">
+
+    <h1 [ngStyle]="{
+        'color':color,
+        'backgroundColor':bgColor
+    }">
+        Style
+    </h1>
+
+    <br>
+
+    <input type="text" class="form-control" [(ngModel)]="color">
+    <input type="text" class="form-control" [(ngModel)]="bgColor">
+
+    <br>
+
+    {{color}}
+
+
+</div>
+
+<hr>
+<hr>
+
+
+<button appHighlight>Increment</button>
+
+
+<hr>
+
+<hr>
+
+<h1>Hello, you have pressed enter {{counter}} number of times!</h1> Press enter key
+to increment the counter.
+  <button (click)="resetCounter()">Reset Counter</button>
+
+
+<hr>
+<hr>
+
+
+
+appRainBow
+<input type="text" class="form-control" appRainBow>
+
+
+<hr>
+<hr>
+
+<button class=" btn btn-success" (click)="goToCvs()">Go To CV's</button>

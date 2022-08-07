@@ -10,6 +10,12 @@ import { DetailCvComponent } from './cvTech/detail-cv/detail-cv.component';
 import { CvComponent } from './cvTech/cv/cv.component';
 import { NavbarComponent } from './cvTech/navbar/navbar.component';
 import { FooterComponent } from './cvTech/footer/footer.component';
+import { StyleComponent } from './cvTech/style/style.component';
+import { HighlightDirective } from './cvTech/directive/highlight.directive';
+import { RainBowDirective } from './cvTech/directive/rain-bow.directive';
+import { EmbaucheComponent } from './cvTech/embauche/embauche.component';
+import { ROURING } from './app-routing';
+import { RouterSimulationComponent } from './cvTech/router-simulation/router-simulation.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +25,17 @@ import { FooterComponent } from './cvTech/footer/footer.component';
     DetailCvComponent,
     CvComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    StyleComponent,
+    HighlightDirective,
+    RainBowDirective,
+    EmbaucheComponent,
+    RouterSimulationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ROURING,
     FormsModule,
   ],
   providers: [],
