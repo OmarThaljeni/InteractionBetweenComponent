@@ -16,6 +16,9 @@ import { RainBowDirective } from './cvTech/directive/rain-bow.directive';
 import { EmbaucheComponent } from './cvTech/embauche/embauche.component';
 import { ROURING } from './app-routing';
 import { RouterSimulationComponent } from './cvTech/router-simulation/router-simulation.component';
+import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
+import { LoginComponent } from './cvTech/login/login.component';
+import { DetailComponent } from './cvTech/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { RouterSimulationComponent } from './cvTech/router-simulation/router-sim
     HighlightDirective,
     RainBowDirective,
     EmbaucheComponent,
-    RouterSimulationComponent
+    RouterSimulationComponent,
+    AddCvComponent,
+    LoginComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

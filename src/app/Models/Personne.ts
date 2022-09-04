@@ -1,5 +1,5 @@
 export class Personne {
-    id: string;
+    id: number;
     firstName: string;
     lastName: string;
     age: number;
@@ -8,7 +8,7 @@ export class Personne {
     job: string;
 
     constructor(
-        id: string = '',
+        id: number = 0,
         firstName: string = '',
         lastName: string = '',
         age: number = 0,
