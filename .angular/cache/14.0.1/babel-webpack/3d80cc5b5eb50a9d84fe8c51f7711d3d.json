@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class LogoutGuard {\n  canActivate(route, state) {\n    const token = localStorage.getItem(\"token\");\n\n    if (token) {\n      return false;\n    } else {\n      return true;\n    }\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

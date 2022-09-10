@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,11 @@ import { RouterSimulationComponent } from './cvTech/router-simulation/router-sim
 import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
 import { LoginComponent } from './cvTech/login/login.component';
 import { DetailComponent } from './cvTech/detail/detail.component';
+import { LoginInterceptor, LoginInterceptorProvider } from './interceptor/login.interceptor';
+import { LoginGuard } from './Guard/login.guard';
+import { LogoutGuard } from './Guard/logout.guard';
+import { UpdatePersonComponent } from './cvTech/update-person/update-person.component';
+import { SearchComponent } from './cvTech/search/search.component';
 
 @NgModule({
   declarations: [
@@ -36,15 +42,18 @@ import { DetailComponent } from './cvTech/detail/detail.component';
     RouterSimulationComponent,
     AddCvComponent,
     LoginComponent,
-    DetailComponent
+    DetailComponent,
+    UpdatePersonComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ROURING,
     FormsModule,
   ],
-  providers: [],
+  providers: [LoginInterceptorProvider,LoginGuard,LogoutGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
