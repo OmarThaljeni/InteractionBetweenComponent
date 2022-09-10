@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class LoginGuard {\n  canActivate(route, state) {\n    const token = localStorage.getItem(\"token\");\n    return !!token;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -17,9 +17,18 @@ export class CvComponent implements OnInit {
   }
 
   ngOnInit() {    
-    this.listPersonne = this.cvService.getPersonne();
+    this.getAllPerson();
   }
 
+
+  getAllPerson()
+  {
+    this.cvService.getPersonne().subscribe(res => {
+      this.listPersonne = res;      
+    },(error => {
+      console.log(error);
+    }))
+  }
 
   recievePersonne(pers : Personne)
   {

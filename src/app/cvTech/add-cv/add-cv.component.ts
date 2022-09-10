@@ -10,6 +10,7 @@ import { CvService } from 'src/app/Services/cv.service';
 })
 export class AddCvComponent implements OnInit {
 
+  errorMessage ='';
   constructor(private cvService: CvService, private router: Router) { }
 
   ngOnInit(): void {
@@ -17,8 +18,18 @@ export class AddCvComponent implements OnInit {
 
   addPersonne(formulaire: NgForm) {
     const link = ["PlateFormeRecrutement/CV"];
-    this.cvService.addPersonne(formulaire.value);
-    this.router.navigate(link);
+    //   this.cvService.addPersonne(formulaire.value);
+    console.log(formulaire.value);
+    this.cvService.addPersonne(formulaire.value).subscribe(res => {
+      console.log(res);
+      this.router.navigate(link);
+    },
+      error => {
+        this.errorMessage="Probléme de connection a votre serveur, Priére de consulter l'administrateur !!"
+        console.log(error);
+      }
+
+    )
   }
 
 }

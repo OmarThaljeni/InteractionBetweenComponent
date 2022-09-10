@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "cv_managament": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "cv_managament",
+    "password": "3OmarrtH@tek-UP07",
+    "name": "cv_managament",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

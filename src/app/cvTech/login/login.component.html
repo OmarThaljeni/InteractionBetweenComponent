@@ -1,4 +1,4 @@
-<form #loginFormulaire="ngForm">
+<form #loginFormulaire="ngForm" (submit)="login(loginFormulaire.value)">
 
     <label for="email">Email </label>
     <input email required id="email" type="text" ngModel name="email" class="form-control" #emailInput="ngModel">
@@ -17,7 +17,7 @@
     </div>
     <br>
 
-    <button [disabled]="loginFormulaire.invalid" class="btn btn-primary" (click)="login(loginFormulaire)">
+    <button [disabled]="loginFormulaire.invalid" class="btn btn-primary" (click)="login(loginFormulaire.value)">
         Se connecter
     </button>
 

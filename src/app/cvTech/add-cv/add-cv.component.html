@@ -1,3 +1,10 @@
+<br>
+
+<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+        {{errorMessage}}
+</div>
+  
+
 <form #formulaire="ngForm">
 
     <label for="firstName">First Name </label>

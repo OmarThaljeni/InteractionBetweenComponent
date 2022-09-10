@@ -1,0 +1,30 @@
+<br>
+
+
+<form #formulaire="ngForm">
+
+    <label for="firstName">First Name </label>
+    <input required id="firstName" type="text" [(ngModel)] = 'personne.firstName' name="firstName" class="form-control">
+
+    <label for="lastName">Last Name </label>
+    <input required id="lastName" type="text" [(ngModel)]= 'personne.lastName' name="lastName" class="form-control">
+
+    <label for="age">Age </label>
+    <input required id="age" min="0" max="100" type="number"  [(ngModel)] = 'personne.age' name="age" class="form-control">
+
+    <label for="cin">CIN </label>
+    <input required id="cin" type="text" ngModel name="cin" [(ngModel)] = 'personne.cin' class="form-control">
+
+    <label for="job">Job </label>
+    <input required id="job" type="text" ngModel name="job" [(ngModel)] = 'personne.job' class="form-control">
+
+
+    <label for="path">Path </label>
+    <input id="path" type="text" ngModel name="path" [(ngModel)] = 'personne.path' class="form-control">
+
+
+    <br>
+
+    <button [disabled]="formulaire.invalid" class="btn btn-primary" (click)="updatePersonne()">Modifier</button>
+
+</form>

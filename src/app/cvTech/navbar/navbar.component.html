@@ -1,50 +1,57 @@
 <nav class="navbar navbar-expand-lg text-white" style="background-color: #45637d;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#" style="color: #ffffff">Plateforme de recrutement</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto ">
-          <li class="nav-item">
-            <a class="nav-link mx-2 active" routerLink="" aria-current="page" href="#" style="color: #ffffff">Home</a>
-          </li>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color: #ffffff">Plateforme de recrutement</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <li class="nav-item">
-            <a class="nav-link mx-2 active" routerLink="PlateFormeRecrutement/CV" aria-current="page" href="#" style="color: #ffffff">Curriculum Vitae</a>
-          </li>
+    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item" *ngIf="this.authentificationService.isLoggedIn()">
+          <a class="nav-link mx-2 active" routerLink="" aria-current="page" href="#" style="color: #ffffff">Home</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link mx-2 active" routerLink="PlateFormeRecrutement/StyleCV" aria-current="page" href="#" style="color: #ffffff">Style</a>
-          </li>
+        <li class="nav-item" *ngIf="this.authentificationService.isLoggedIn()">
+          <a class="nav-link mx-2 active" routerLink="PlateFormeRecrutement/CV" aria-current="page" href="#"
+            style="color: #ffffff">Curriculum Vitae</a>
+        </li>
 
-          
-          <li class="nav-item">
-            <a class="nav-link mx-2 active" routerLink="PlateFormeRecrutement/ajouterCV" aria-current="page" href="#" style="color: #ffffff">Add CV</a>
-          </li>
+        <li class="nav-item" *ngIf="this.authentificationService.isLoggedIn()">
+          <a class="nav-link mx-2 active" routerLink="PlateFormeRecrutement/StyleCV" aria-current="page" href="#"
+            style="color: #ffffff">Style</a>
+        </li>
 
 
-          <li class="nav-item">
-            <a class="nav-link mx-2 active" routerLink="PlateFormeRecrutement/login" aria-current="page" href="#" style="color: #ffffff">Login</a>
-          </li>
+        <li class="nav-item" *ngIf="this.authentificationService.isLoggedIn()">
+          <a class="nav-link mx-2 active" routerLink="PlateFormeRecrutement/ajouterCV" aria-current="page" href="#"
+            style="color: #ffffff">Add CV</a>
+        </li>
 
 
+        <li class="nav-item" *ngIf="!this.authentificationService.isLoggedIn()">
+          <a class="nav-link mx-2 active" routerLink="PlateFormeRecrutement/login" aria-current="page" href="#"
+            style="color: #ffffff">Login</a>
+        </li>
 
-        </ul>
-        <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
-          <li class="nav-item mx-2">
-            <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-facebook-square"></i></a>
-          </li>
-        </ul>
-      </div>
+        <li class="nav-item" *ngIf="this.authentificationService.isLoggedIn()">
+          <a class="nav-link mx-2 active" (click)="logout()" aria-current="page" href="#"
+            style="color: #ffffff">Logout</a>
+        </li>
+
+
+      </ul>
+      <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+        <li class="nav-item mx-2">
+          <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-facebook-square"></i></a>
+        </li>
+      </ul>
     </div>
-  </nav>
-
-
+  </div>
+</nav>
